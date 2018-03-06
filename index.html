@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+
+    <style>
+        /***removing body margin***/
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /***general***/
+        .container {
+            width: 980px;
+            margin: 0 auto;
+            height: auto;
+            overflow: auto;
+        }
+
+        /***header***/
+        #header {
+            width: 100%;
+            min-width: 980px;
+            height: 82px;
+            background-color: #3b5998;
+            background: linear-gradient(#4e69a2, #3b5998);
+            border-bottom: 1px solid #133783;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        #logo {
+            display: block;
+            width: 170px;
+            height: 34px;
+            background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/b1rgWyjYfmY.png");
+            background-position: 0 0;
+            margin-top: 30px;
+            overflow: hidden;
+            text-indent: -100px;
+        }
+
+        .login-box {
+            width: auto;
+            height: 82px;
+            padding-top: 13px;
+            float: left;
+            margin-left: 15px;
+            box-sizing: border-box;
+        }
+
+            .login-box label,
+            .login-box a {
+                font-size: 12px;
+                padding-left: 1px;
+            }
+
+            .login-box label {
+                color: #fff;
+            }
+
+            .login-box a {
+                color: #9cb4d8;
+                text-decoration: none;
+            }
+
+            .login-box input[type="email"],
+            .login-box input[type="password"] {
+                width: 142px;
+                height: 17px;
+                border: 1px solid #1d2a5b;
+                font-size: 12px;
+                margin-top: 4px;
+                padding: 2px;
+                margin-bottom: 2px;
+            }
+
+            .login-box input[type="submit"] {
+                background-color: #4267b2;
+                border: 1px solid #29487d;
+                color: #fff;
+                height: 24px;
+                padding: 2px 6px;
+                font-size: 12px;
+                font-weight: bold;
+                margin-top: 22px;
+                border-radius: 2px;
+                line-height: 18px;
+                cursor: pointer;
+            }
+
+                .login-box input[type="submit"]:hover {
+                    background-color: #365899;
+                }
+
+            .login-box a:hover {
+                text-decoration: underline;
+            }
+
+        input:focus {
+            outline: none;
+        }
+
+        /**main**/
+        #main {
+            width: 100%;
+            min-width: 980px;
+            height: 600px;
+            background-color: #fff;
+            background: linear-gradient(#fff, #d3d8e8);
+        }
+
+        .description {
+            width: 450px;
+            font-size: 20px;
+            color: #0e385f;
+            font-weight: bold;
+            margin-top: 40px;
+            line-height: 29px;
+        }
+
+        .float-left img {
+            width: 537px;
+            height: 195px;
+        }
+
+        .float-right table {
+            width: 400px;
+        }
+
+            .float-right table td {
+                padding: 4px;
+                width: 50%;
+            }
+
+            .float-right table input[type="text"],
+            .float-right table input[type="email"],
+            .float-right table input[type="password"] {
+                width: 100%;
+                border: 1px solid #bdc7d8;
+                border-radius: 5px;
+                padding: 8px 10px;
+                font-size: 18px;
+                box-sizing: border-box;
+            }
+
+            .float-right table select {
+                font-size: 13px;
+                height: 30px;
+                padding: 5px 4px;
+                border-color: #bdc7d8;
+            }
+
+                .float-right table select:nth-of-type(2),
+                .float-right table select:nth-of-type(3) {
+                    margin-left: -4px;
+                }
+
+            .float-right table h2 {
+                font-size: 36px;
+                color: #333;
+                margin: 17px auto 0;
+            }
+
+            .float-right table span {
+                color: #1d2129;
+                font-size: 19px;
+            }
+
+            .float-right table p {
+                color: #777;
+                font-size: 11px;
+                width: 316px;
+                line-height: 14px;
+            }
+
+            .float-right table div {
+                display: inline-block;
+                color: #1d2129;
+                font-size: 18px;
+                padding: 5px 10px 0 3px;
+            }
+
+            .float-right table input[type="submit"] {
+                background: linear-gradient(#67ae55, #578843);
+                background-color: #69a74e;
+                box-shadow: inset 0 1px 1px #a4e388;
+                border: 1px solid #3b6e22;
+                border-radius: 5px;
+                color: #fff;
+                cursor: pointer;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                min-width: 194px;
+                padding: 7px 20px;
+                text-align: center;
+                font-size: 19px;
+                font-weight: bold;
+            }
+
+            .float-right table tr:nth-of-type(3) td {
+                padding-top: 15px;
+            }
+
+            .float-right table tr:nth-of-type(5) td {
+                padding-bottom: 15px;
+            }
+
+            .float-right table tr:nth-of-type(7) a,
+            .float-right table a {
+                display: inline-block;
+                font-size: 11px;
+                max-width: 150px;
+                color: #365899;
+                cursor: pointer;
+                text-decoration: none;
+                line-height: 14px;
+            }
+
+                .float-right table tr:nth-of-type(7) a:hover,
+                .float-right table a:hover {
+                    text-decoration: underline;
+                }
+
+            .float-right table tr:last-of-type p {
+                border-top: 1px solid #dddfe2;
+                color: #666;
+                font-size: 13px;
+                font-weight: bold;
+                margin-top: 10px;
+                padding-top: 15px;
+                width: auto;
+            }
+
+                .float-right table tr:last-of-type p a {
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+
+        /*footer*/
+        #footer {
+            width: 100%;
+            background: #fff;
+            height: auto;
+            padding: 30px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #footer li {
+            display: inline-block;
+            font-size: 12px;
+            color: #737373;
+            vertical-align: middle;
+            padding-right: 8px;
+        }
+
+            #footer li a {
+                cursor: pointer;
+                color: #365899;
+                text-decoration: none;
+            }
+
+                #footer li a:hover {
+                    text-decoration: underline;
+                }
+
+        .more-lang {
+            display: block;
+            padding: 4px 9px;
+            background-color: #f6f7f9;
+            border: 1px solid #ced0d4;
+            color: #4b4f56;
+            border-radius: 2px;
+            transition: background-color 0.2s;
+        }
+
+            .more-lang:hover {
+                background-color: #ececec;
+            }
+
+        .plus-icon {
+            display: block;
+            background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/X05JQ1RQ6cR.png") no-repeat -39px -202px;
+            width: 10px;
+            height: 10px;
+        }
+
+        .languages::after {
+            content: "";
+            display: block;
+            width: 100%;
+            border-top: 1px solid #dddfe2;
+            margin: 10px 0 8px;
+        }
+
+        #footer .links li {
+            padding-right: 16px;
+            margin-bottom: 2px;
+            position: relative;
+        }
+
+        .ad-choices {
+            display: inline-block;
+            background: url("https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/b1rgWyjYfmY.png") no-repeat -19px -81px;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 1px;
+            right: 2px;
+        }
+
+        .links li:nth-child(28) {
+            margin-right: 16px;
+        }
+
+        .copy-rights {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #737373;
+        }
+
+        #footer label {
+            color: transparent;
+            text-shadow: 0 0 12px #8a8a8a;
+            cursor: pointer;
+        }
+
+        #footer input {
+            display: none;
+        }
+
+            #footer input[type="checkbox"]:checked ~ label {
+                color: #999;
+                text-shadow: none;
+            }
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="float-left"> <a href="#" id="logo">Facebook</a> </div>
+            <div class="float-right">
+
+                <!--منطقة حقل الإيميل-->
+                <div class="login-box">
+                    <div>
+                        <label for="email">E-posta veya Telefon</label>
+                    </div>
+                    <div>
+                        <input type="email" id="email" autofocus>
+                    </div>
+                </div>
+
+                <!--منطقة حقل الباسورد-->
+                <div class="login-box">
+                    <div>
+                        <label for="password">Şifre</label>
+                    </div>
+                    <div>
+                        <input type="password" id="password">
+                    </div>
+                    <div><a href="#">Hesabını mı unuttun?</a></div>
+                </div>
+
+                <!--منطقة زر تسجيل الدخول-->
+                <div class="login-box">
+                    <input type="submit" value="Giriş Yap">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="float-left">
+                <div class="description"> Facebook tanıdıklarınla iletişim kurmanı ve hayatında olup bitenleri paylaşmanı sağlar. </div>
+                <div> <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/GwFs3_KxNjS.png" alt=""> </div>
+            </div>
+            <div class="float-right">
+                <form>
+                    <table>
+                        <tr>
+                            <td colspan="2"><h2>Hesap Aç</h2></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span>Ücretsizdir ve her zaman ücretsiz kalacaktır.</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Adın"></td>
+                            <td><input type="text" placeholder="Soyadın"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="email" placeholder="Cep telefonu numarası veya e-posta"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="password" placeholder="Yeni şifre"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span>Doğum Tarihi</span></td>
+                        </tr>
+                        <tr>
+                            <!--خلية حقول تاريخ الميلاد-->
+                            <td>
+                                <select>
+                                    <option>Gün</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <select>
+                                    <option>Ay</option>
+                                    <option>Oca</option>
+                                    <option>Mar</option>
+                                </select>
+                                <select>
+                                    <option>Yıl</option>
+                                    <option>2018</option>
+                                    <option>2017</option>
+                                </select>
+                            </td>
+
+                            <!--خلية الرابط-->
+                            <td><a href="#">Doğum tarihimi vermem neden gerekiyor?</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+                                    <input type="radio" id="Kadın" name="gender">
+                                    <label for="Kadın">Kadın</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="Erkek" name="gender">
+                                    <label for="Erkek">Erkek</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p> Hesap Aç düğmesine tıklayarak,<a href="#"> Çerez Kullanımı</a> dahil Veri <a href="#">İlkemizi</a> okuduğunu ve <a href="#">Koşullarımızı</a> kabul etmiş olursun. Facebook'tan SMS Bildirimleri alabilir ve bu bildirimleri istediğin zaman durdurabilirsin. </p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Hesap Aç"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p>Ünlü biri, müzik grubu veya şirket için <a href="#">Sayfa oluştur</a>.</p></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="languages">
+                <ul>
+                    <li>Türkçe</li>
+                    <li><a href="#">English (US)</a></li>
+                    <li><a href="#">Ελληνικά</a></li>
+                    <li><a href="#">Română</a></li>
+                    <li><a href="#">Български</a></li>
+                    <li><a href="#">Русский</a></li>
+                    <li><a href="#">العربية</a></li>
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">Polski</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Português (Brasil)</a></li>
+                    <li><a href="#" class="more-lang"><i class="plus-icon"></i></a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Kaydol</a></li>
+                    <li><a href="#">Giriş Yap</a></li>
+                    <li><a href="#">Messenger</a></li>
+                    <li><a href="#">Facebook Lite</a></li>
+                    <li><a href="#">Mobil</a></li>
+                    <li><a href="#">Arkadaşlarını Bul</a></li>
+                    <li><a href="#">Kişiler</a></li>
+                    <li><a href="#">Sayfalar</a></li>
+                    <li><a href="#">Yerler</a></li>
+                    <li><a href="#">Oyunlar</a></li>
+                    <li><a href="#">Konumlar</a></li>
+                    <li><a href="#">Ünlüler</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Gruplar</a></li>
+                    <li><a href="#">Tarifler</a></li>
+                    <li><a href="#">Spor</a></li>
+                    <li><a href="#">Gör</a></li>
+                    <li><a href="#">Moments</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Yerel</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Reklam Oluştur</a></li>
+                    <li><a href="#">Sayfa Oluştur</a></li>
+                    <li><a href="#">Geliştiriciler</a></li>
+                    <li><a href="#">Kariyer Olanakları</a></li>
+                    <li><a href="#">Gizlilik</a></li>
+                    <li><a href="#">Çerezler</a></li>
+                    <li><a href="#">Ad Choices <i class="ad-choices"></i></a></li>
+                    <li><a href="#">Koşullar</a></li>
+                    <li><a href="#">Yardım</a></li>
+                </ul>
+            </div>
+            <div class="copy-rights"> Facebook &copy; 2018 </div>
+        </div>
+    </div>
+</body>
+</html>
